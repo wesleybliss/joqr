@@ -9,8 +9,8 @@ import Settings from './pages/Settings'
 import NotFound from './pages/NotFound'
 import Toolbar from './components/Toolbar/index.jsx'
 
-import './styles/tailwind.css'
-import './styles/index.css'
+import './assets/styles/tailwind.css'
+import './assets/styles/index.css'
 
 setNamespace('jsrepl')
 

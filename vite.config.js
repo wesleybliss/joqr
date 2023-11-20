@@ -1,10 +1,20 @@
 import { defineConfig } from 'vite'
 import preact from '@preact/preset-vite'
 
+const prod = process.env.NODE_ENV === 'production'
+
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
     
     plugins: [preact()],
+    
+    build: {
+        minify: prod,
+        sourcemap: !prod,
+    },
+    /* resolve: {
+        alias: aliases,
+    }, */
     
     // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
     //

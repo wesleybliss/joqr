@@ -5,21 +5,21 @@ import autoprefixer from 'autoprefixer'
 import postcssUrl from 'postcss-url'
 import cssnano from 'cssnano'
 export default {
-
+    
     plugins: [
-
+        
         postcssImport({
             resolve: (id, basedir, importOptions) => {
                 console.log({ id, basedir, importOptions })
                 return ''
             },
         }),
-
+        
         tailwindcssNesting(),
-        tailwindCss(),
+        tailwindCss,
         autoprefixer(),
         postcssUrl(),
-
+        
         cssnano({
             preset: ['default', {
                 minifyFontValues: {
@@ -27,6 +27,7 @@ export default {
                 },
             }],
         }),
-
+        
     ],
+    
 }

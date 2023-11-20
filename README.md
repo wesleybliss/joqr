@@ -2,6 +2,8 @@
 
 JOQR (JavaScript Offline Quick REPL): _/jo·ker/_ is a lightweight JavaScript REPL built using Tauri (Rust + Preact).
 
+![JOQR screenshot](src/assets/images/joqr-screenshot.png "JOQR screenshot")
+
 ## Features
 
 - Rich code editor ([Monaco](https://www.npmjs.com/package/@monaco-editor/react#create-your-own-editor))
