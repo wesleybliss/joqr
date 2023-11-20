@@ -1,6 +1,6 @@
 [package]
 name = "joqr"
-version = "1.0.1"
+version = "1.0.0"
 description = "JavaScript Offline Quick REPL"
 authors = ["Wesley Bliss"]
 license = ""
