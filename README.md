@@ -16,3 +16,7 @@ JOQR (JavaScript Offline Quick REPL): _/jo·ker/_ is a lightweight JavaScript RE
 - [ ] Google Fonts integration
 - [ ] Node.js support
 - [ ] Dependency loading support
+
+## Known Issues
+
+- [ ] Only the last output value gets printed, while some similar apps will print all printable outputs
