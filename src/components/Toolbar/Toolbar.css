@@ -1,0 +1,13 @@
+
+#Toolbar {
+    
+    @apply fixed inset-x-0 top-0 w-full z-10;
+    @apply flex justify-between items-center content-center;
+    
+    @apply bg-base-200;
+    
+    & ul {
+        @apply flex justify-between items-center content-center;
+    }
+    
+}

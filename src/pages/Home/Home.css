@@ -1,7 +1,12 @@
 
 #Home {
     
-    @apply w-full h-screen p-1;
+    @apply w-full p-1;
     @apply grid grid-cols-[1fr_4px_1fr] gap-1;
+    @apply overflow-hidden;
+    
+    .monaco-editor .view-lines {
+        
+    }
     
 }

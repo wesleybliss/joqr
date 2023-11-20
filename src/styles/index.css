@@ -1,6 +1,11 @@
-*,
-textarea {
-	font-family: 'JetBrains Mono', monospace;
+
+:root {
+	--ui-font-family: 'Roboto';
+	--navbarHeight: 52px;
+}
+
+html {
+	font-family: var(--ui-font-family);
 }
 
 :-webkit-scrollbar {
@@ -26,4 +31,12 @@ textarea {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #295b99;
 	outline: 1px solid #2c61a3;
+}
+
+.page {
+	
+	/* All pages must account for the toolbar height */
+	height: calc(100vh - var(--navbarHeight));
+	margin-top: var(--navbarHeight);
+	
 }

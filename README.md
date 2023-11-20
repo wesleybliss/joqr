@@ -1,7 +1,18 @@
-# Tauri + React
+# JOQR
 
-This template should help get you started developing with Tauri and React in Vite.
+JOQR (JavaScript Offline Quick REPL): _/jo·ker/_ is a lightweight JavaScript REPL built using Tauri (Rust + Preact).
 
-## Recommended IDE Setup
+## Features
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- Rich code editor ([Monaco](https://www.npmjs.com/package/@monaco-editor/react#create-your-own-editor))
+- Instant evaluation
+- Customizable UI
+
+## Roadmap
+
+- [ ] More settings
+- [ ] Multiple, tabbed editors
+- [ ] Ability to save/load sessions
+- [ ] Google Fonts integration
+- [ ] Node.js support
+- [ ] Dependency loading support

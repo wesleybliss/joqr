@@ -1,16 +1,33 @@
-import { useRef } from 'preact/hooks'
+import { useRef, useMemo } from 'preact/hooks'
 import { useAtom } from 'jotai'
-import * as store from '../../store'
+import deepmerge from 'deepmerge'
 
+import * as store from '../../store'
 import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react'
 
 const MonacoEditor = ({
+    options,
     ...props
 }) => {
     
     const editorRef = useRef(null)
     
-    const [code, setCode] = useAtom(store.code)
+    const [, setCode] = useAtom(store.code)
+    const [codeTheme] = useAtom(store.codeTheme)
+    const [minimapEnabled] = useAtom(store.minimapEnabled)
+    
+    const editorOptions = useMemo(() => {
+        
+        const opts = {
+            minimap: {
+                enabled: minimapEnabled,
+            },
+            codeLens: minimapEnabled,
+        }
+        
+        return deepmerge(opts, (options || {}))
+        
+    }, [options, minimapEnabled])
     
     const handleEditorChange = (value, event) => {
         // here is the current value
@@ -24,7 +41,7 @@ const MonacoEditor = ({
     }
     
     const handleEditorWillMount = monaco => {
-        console.log('beforeMount: the monaco instance:', monaco);
+        // console.log('beforeMount: the monaco instance:', monaco);
     }
     
     const handleEditorValidation = markers => {
@@ -44,10 +61,12 @@ const MonacoEditor = ({
             height="100vh"
             defaultLanguage="javascript"
             defaultValue=""
+            theme={codeTheme}
             onChange={handleEditorChange}
             onMount={handleEditorDidMount}
             beforeMount={handleEditorWillMount}
             onValidate={handleEditorValidation}
+            options={editorOptions}
             {...props} />
         
     )

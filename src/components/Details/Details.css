@@ -1,0 +1,23 @@
+
+.Details {
+    
+    /* Hides the down arrow/caret on the summary CTA */
+    
+    & summary {
+        list-style: none;
+    }
+    
+    & summary::marker {
+        display: none;
+    }
+    
+    & summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    & summary::after {
+        content: "";
+        display: none;
+    }
+    
+}

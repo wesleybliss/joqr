@@ -1,0 +1,14 @@
+
+.StoreSelectInput {
+    
+    @apply form-control w-full max-w-xs;
+    
+    & label {
+        @apply label;
+    }
+    
+    & select {
+        @apply select select-bordered;
+    }
+    
+}

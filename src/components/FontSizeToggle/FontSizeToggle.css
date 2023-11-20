@@ -1,0 +1,24 @@
+
+.FontSizeToggle {
+    
+    
+    @apply menu menu-horizontal absolute;
+    @apply w-10 h-10 opacity-20;
+    @apply bg-base-200 rounded-box;
+    @apply z-20 overflow-hidden;
+    
+    * {
+        @apply opacity-0;
+    }
+    
+    &:hover {
+        
+        @apply w-auto h-auto opacity-100;
+        
+        * {
+            @apply opacity-100;
+        }
+        
+    }
+    
+}
