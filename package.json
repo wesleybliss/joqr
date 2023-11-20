@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "yarn version --patch && cd src-tauri && cargo bump patch && cd -",
     "build": "vite build",
     "preview": "vite preview",
     "tauri": "tauri"
