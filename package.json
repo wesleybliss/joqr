@@ -1,11 +1,11 @@
 {
   "name": "joqr",
   "private": true,
-  "version": "1.0.6",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "yarn version --patch && cd src-tauri && cargo bump patch && cd -",
+    "prebuild": "yarn version --patch && node bin/bump-app-version.cjs",
     "build": "vite build",
     "preview": "vite preview",
     "tauri": "tauri"
